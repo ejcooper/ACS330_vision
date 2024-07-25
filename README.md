@@ -21,7 +21,22 @@ usb_cam: https://github.com/ros-drivers/usb_cam
   
 - navigate back to the workspace, install dependancies, and build
 
-full instructions for this can be found on the ROS documentaion website
+Full instructions for this can be found on the ROS documentaion website as well as in the repositories mentioned above.
+
+## editing the Camera parameters
+Once all the code had been correctly installed, the camera will need calibrating. 
+To do this the camera parameters YAML file must be edited. 
+First enter the resolution that you are using for the camera into the image height and width fields, and set the distortion model 
+to plumb bob (this is the case for most cameras). Next, a tool such as the MATLAB Camera Calibrator App 
+https://uk.mathworks.com/help/vision/ref/cameracalibrator-app.html 
+can be used to obtain the internal matrix K, and the radial and tangential distortion coefficients.  
+
+The camera matrix and rectification matrix should both be set to the internal matrix K, and the distortion coefficients 
+should be a vector containing the 2 radial, then the 2 tangential distortion coefficients with a final 0. 
+The projection matrix will should equal the internal matrix K followed by a final column of zeros. 
+
+The usb_cam package comes with a default set of camera parameters, but you can use any file for this by specifying the file 
+directory in the 'camera_info_url' field in the launch_pkg/launch/vison_launch.py file.
 
 # Running
 
