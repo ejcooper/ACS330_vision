@@ -191,7 +191,7 @@ class poseTransformNode(Node):
         
         # rotate each block 90 to acount for incorrect CAD files
         # if somethings going wrong, it might be this  
-        mark_from_orig = rotate_90(mark_from_orig_1)
+        #mark_from_orig = rotate_90(mark_from_orig_1)
         
        
         return( Transform2Pose( mark_from_orig ) )
