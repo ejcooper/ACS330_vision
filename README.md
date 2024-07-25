@@ -15,7 +15,11 @@ Both the 'joint_test' and 'pose_transform' files are not needed and can be ignor
 - navigate to the computers root directory
 - create a ROS2 workspace and navigate into the /src folder
 - clone this repo along with the 'aruco_ros' and 'usb_cam' repos
-- navigate back to the workspace and build
+
+aruco_ros: https://github.com/pal-robotics/aruco_ros
+usb_cam: https://github.com/ros-drivers/usb_cam
+  
+- navigate back to the workspace, install dependancies, and build
 
 full instructions for this can be found on the ROS documentaion website
 
