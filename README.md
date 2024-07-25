@@ -1,4 +1,5 @@
- - - - Overview - - - 
+# Overview 
+
 This system will use a usb webcam to detect and locate Aruco markers.
 The pose of each marker will be returned on a topic in the ‘/transformed’ namespace, followed by the marker that topic is tracking.
 E.g. The pose of the Aruco marker with code 1 is published on the ‘/transformed/marker1’ topic. 
@@ -7,8 +8,7 @@ given marker relative to marker 0, shown below. The position is in cartesian (X,
 quaternions in the order x,y,z,w. Each element can be retrieved using the following syntax: Pose.position.X or Pose.orientation.x
 All the distances are measured in metres from the centre of each marker.
 
-
- - - - Setup - - -
+# Setup
 
 - navigate to the computers root directory
 - create a ROS2 workspace and navigate into the /src folder
@@ -17,14 +17,15 @@ All the distances are measured in metres from the centre of each marker.
 
 full instructions for this can be found on the ROS documentaion website
 
- - - - Running - - -
+# Running
+
 To run, use the terminal to go to, then source, the correct workspace. 
 
-Source install/local_setup.bash
+    Source install/local_setup.bash
 
 Then run the ‘vision_system_launch’ script.
 
-Ros2 launch launch_pkg vision_launch.py
+    Ros2 launch launch_pkg vision_launch.py
 
 
 This will launch the ‘USB cam’ node, 4 ‘Aruco double’ nodes, and the ‘pose transformer’ node. This will allow the system to track 6 
