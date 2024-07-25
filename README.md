@@ -8,6 +8,8 @@ given marker relative to marker 0, shown below. The position is in cartesian (X,
 quaternions in the order x,y,z,w. Each element can be retrieved using the following syntax: Pose.position.X or Pose.orientation.x
 All the distances are measured in metres from the centre of each marker.
 
+Both the 'joint_test' and 'pose_transform' files are not needed and can be ignored. 
+
 # Setup
 
 - navigate to the computers root directory
