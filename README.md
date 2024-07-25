@@ -29,7 +29,7 @@ Then run the ‘vision_system_launch’ script.
 
 
 This will launch the ‘USB cam’ node, 4 ‘Aruco double’ nodes, and the ‘pose transformer’ node. This will allow the system to track 6 
-blocks (using markers 2-7) as well as the 2 larger markers ( codes 0, 1) used to find the position of both tables.
+blocks as well as the 2 larger markers ( codes 0, 1) used to find the position of both tables.
 The pose for each marker is published every time the system receives a frame from the camera. Current camera frame rate is 10 Hz, so 
 this also around the rate at which marker poses are published. 
 
